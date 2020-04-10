@@ -13,11 +13,11 @@ const MONGO_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_P
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
+
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-
 
 mongoose.Promise = global.Promise;
 mongoose
