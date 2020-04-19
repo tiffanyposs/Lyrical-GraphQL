@@ -27,7 +27,7 @@ class SongCreate extends Component {
       variables: {
         title,
       },
-      refetchQueries: [{ query: fetchSongs }] // warm up cache
+      refetchQueries: [{ query: fetchSongs }] // warm up cache, refetches data associated with a DIFFERENT component
     }).then(() => hashHistory.push('/'));
 
     this.resetInput();
